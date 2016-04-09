@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nanoblog Login</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.2/css/materialize.css">
+</head>
+
+<body>
+
+    {% if form.errors %}
+    <div class="container">
+        <div class="row">
+            <div class="col l8 offset-l2 m12 offset-m0 s12">
+                <article class="card red lighten-2 white-text">
+                    <div class="card-content">
+                        <p>
+                            Invalid username and password combination.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col l8 offset-l2 m12 offset-m0 s12">
+                <article class="card white z-depth-2">
+                    <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+                        <h2>Sign into Nanoblog</h2>
+
+                        <div class="card-content">
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                            {{ form.password.label_tag }}
+                            {{ form.password }}
+                        </div>
+
+                        <button class="btn waves-effect waves-light blue darken-3 right submit" type="submit">Sign in</button>
+                        <input type="hidden" name="next" value="{{ next }}" />
+                        {% csrf_token %}
+                    </form>
+                    <form method="get" action="{% url 'register' %}">
+                        <button class="btn waves-effect waves-light aqua darken-3 right submit" type="submit">Register</button>
+                    </form>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

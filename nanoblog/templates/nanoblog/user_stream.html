@@ -1,0 +1,58 @@
+{% extends "nanoblog/stream.html" %}
+
+{% block stream_header %}
+<div class="container">
+	<div class="row">
+		<div class="col l8 offset-l2 m12 offset-m0 s12">
+			<article class="card white z-depth-2">
+				<div class="card-image">
+					{% if profile_user.blogger.profile_picture_url %}
+					<img src="{{ profile_user.blogger.profile_picture_url }}">
+					{% endif %}
+					<span class="card-title"> {{ profile_user.username }} </span>
+				</div>
+				
+				<header>
+					<span class="right grey-text">
+					@{{ profile_user.username }}
+					</span>
+					<h4>
+						{{ profile_user.get_full_name }}
+					</h4>
+					{% if profile_user.blogger.age %}
+					<p class="grey-text">
+						Age {{ profile_user.blogger.age }}
+					</p>
+					{% endif %}
+				</header>
+
+				<div class="card-content">
+					{% if not profile_user.blogger.bio %}
+					  {% block no_bio %}
+
+					  {% endblock %}
+					{% else %}
+					  <p> 
+					  {{ profile_user.blogger.bio }}
+					  </p>
+					{% endif %}
+				</div>
+
+			</article>
+			{% block stream_header_actions %}
+
+			{% endblock %}
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block redirect %}
+<input type="hidden" name="redirect" value="user">
+<input type="hidden" name="redirect_user" value="{{ profile_user.username }}">
+{% endblock %}
+
+{% block page_header %}
+
+{% endblock %}
+

@@ -1,0 +1,107 @@
+commit 0a82c273f71ab0006ce7d5a6cad90909e535951e
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sun Mar 8 20:16:24 2015 -0700
+
+    ensure comments are ordered properly
+
+commit b9bb420ce95666b7417fa1dfbec08a8787777c1c
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sun Mar 8 19:20:34 2015 -0700
+
+    fix profile pic url checking
+
+commit 669d878f33a88643473826a1490a44f878711feb
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sun Mar 8 19:17:18 2015 -0700
+
+    fix profile pic url template syntax
+
+commit 92c04df282fe6cf47d2222ea9f77f0abb827fa75
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sun Mar 8 19:15:28 2015 -0700
+
+    update profile pic urls
+
+commit 867b8bd3aa89db28d06c73b9c1f51da3ce74d269
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sun Mar 8 18:59:17 2015 -0700
+
+    Add s3 uploading support
+
+commit 0a550b9f1a64d66d0781ebfb98ef0fc1725a1cc5
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Mar 7 18:13:47 2015 -0800
+
+    make picture url field optional
+
+commit 372b0ef9f1e507184f0b569d732bc70b841145d2
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Mar 7 18:09:16 2015 -0800
+
+    revert to old model temporarily
+
+commit d06442fb5e90e6364b6b16ad43865333f18b8988
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Mar 7 18:07:46 2015 -0800
+
+    update wsgi application
+
+commit 936306e1001e288535a9aca14bdafbf4f5418f76
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Mar 7 17:35:13 2015 -0800
+
+    fix model to allow null profile pic url
+
+commit 32b811043323147fb7fdeeecd803ac075f8cd35c
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Mar 7 17:24:12 2015 -0800
+
+    setup postgres
+
+commit bff6aeac33fff7673028b3f65e302630bf3938f1
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Mar 7 14:44:52 2015 -0800
+
+    Add email confirmation support
+
+commit b80fa1294c07c49f4de0a03f7bdd0e0d7bae71f7
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 13:09:45 2015 -0500
+
+    add dummy static file
+
+commit 230daae32b5ef77b2f8f8a5bcc66a676ed9dccc2
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 13:01:30 2015 -0500
+
+    reset database
+
+commit 4d517fd7bb1eed06028558f74a29d5e7cea1cec1
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 12:59:20 2015 -0500
+
+    configure staticfiles
+
+commit c304e647284a70add24d407d2eccfde4ac4e93c2
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 12:41:37 2015 -0500
+
+    update django version
+
+commit ff0d66fdd371ac36856e0f0047d78cd95045edc2
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 12:35:01 2015 -0500
+
+    configure static root
+
+commit a81f15e5cfd95adf9af54564468d6e57dc54d438
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 12:23:57 2015 -0500
+
+    add static root
+
+commit 1e78aa4475ddfa9283a50580602c489ad7f8ea56
+Author: Chris <chrisbarker@cmu.edu>
+Date:   Sat Feb 28 12:19:27 2015 -0500
+
+    initial commit

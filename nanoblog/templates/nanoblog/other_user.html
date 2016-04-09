@@ -1,0 +1,25 @@
+{% extends "nanoblog/user_stream.html" %}
+
+{% block stream_header_actions %}
+	{% if following %}
+
+	<form action="{% url 'unfollow' profile_user.username %}" method="POST">
+		<button type="submit" class="right waves-effect waves-light btn red darken-2"/><i class="mdi-action-visibility-off"></i> Unfollow</button>
+		{% csrf_token %}
+	</form>
+
+	{% else %}
+
+	<form action="{% url 'follow' profile_user.username %}" method="POST">
+		<button type="submit" class="right waves-effect waves-light btn green darken-2"/><i class="mdi-action-visibility"></i> Follow</button>
+		{% csrf_token %}
+	</form>
+
+	{% endif %}
+
+{% endblock %}
+
+
+{% block addpost %}
+
+{% endblock %}

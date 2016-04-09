@@ -1,0 +1,31 @@
+{% extends "nanoblog/base.html" %}
+
+{% block page_header %}
+
+<h3> Edit Profile </h3>
+
+{% endblock %}
+
+{% block page %}
+
+<div class="container">
+	<div class="row">
+		<div class="col l8 offset-l2 m12 offset-m0 s12">
+			<article class="card white z-depth-2">
+				<form enctype="multipart/form-data" action="edit_profile" method="post">
+					{% csrf_token %}
+
+					<ul>
+						{{ edit_profile_form.as_ul }}
+					</ul>
+
+					<button class="btn waves-effect waves-light aqua darken-3 submit right">Submit
+						<i class="mdi-content-send right"></i>
+					</button>	
+				</form>
+			</article>
+		</div>	
+	</div>
+</div>
+
+{% endblock %}

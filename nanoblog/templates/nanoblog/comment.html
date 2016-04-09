@@ -1,0 +1,19 @@
+<article class="comment card grey lighten-2 z-depth-3">
+    {% if comment.user.blogger.profile_picture_url %}
+        <img class="left z-depth-2 comment_thumbnail" src="{{ comment.user.blogger.profile_picture_url }}">
+    {% endif %}
+
+    <div class="card-action">
+      <a href="{% url 'user' comment.user.username %}">{{comment.user.username}}</a>
+
+        <span class="white-text right">
+          {{ comment.datetime }}
+        </span>
+    </div>
+    <div class="card-content darken-1">
+        <form class="comment_form">
+            <p class="comment_error"></p>
+            {{ comment.text }}
+        </form>
+    </div>
+</article>

@@ -1,0 +1,49 @@
+<div id="blogpost_list">
+	{% for pac in posts_and_comments %}
+	<div class="container">
+	    <div class="row">
+	        <div class="col l8 offset-l2 m12 offset-m0 s12">
+	            <article class="card grey lighten-3 z-depth-2 postcard" last_updated="{{ pac.last_updated }}">
+
+	                <article class="card blue darken-2 z-depth-3">
+	                    {% if pac.post.user.blogger.profile_picture_url %}
+	                        <img class="left z-depth-2 post_thumbnail" src="{{ pac.post.user.blogger.profile_picture_url }}">
+	                    {% endif %}
+
+	                    <div class="card-action">
+	                      <a href="{% url 'user' pac.post.user.username %}">{{pac.post.user.username}}</a>
+
+	                        <span class="grey-text right">
+	                          {{ pac.post.datetime }}
+	                      </span>
+	                    </div>
+
+	                    <div class="card-content white-text">
+	                        {{ pac.post.text }}
+	                    </div>
+	                </article>
+
+	                <ul class="comment_list">
+	                {% for comment in pac.comments %}
+	                	{% include "nanoblog/comment.html" %}
+	                {% endfor %}
+	                </ul>
+	                <article class="comment card grey lighten-2 z-depth-3">
+	                    <div class="card-content darken-1">
+	                        <form class="comment_form">
+	                            <p class="comment_error"></p>
+	                            <input type="hidden" name="postid" value="{{pac.post.id}}">
+	                                {% csrf_token %}
+	                                {{ comment_form.text }}
+	                            <a class="btn waves-effect waves-light white-text aqua darken-3 right">Post
+	                                <i class="mdi-content-send right"></i>
+	                            </a>
+	                        </form>
+	                    </div>
+	                </article>
+	            </article>
+	        </div>        
+	    </div>
+	</div>
+	{% endfor %}
+</div>

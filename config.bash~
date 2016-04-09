@@ -1,0 +1,7 @@
+export EMAIL_HOST=smtp.andrew.cmu.edu
+export EMAIL_PORT=465
+export EMAIL_USER=cmbarker
+export EMAIL_PASSWORD='Cyanide250a!'
+export NB_SECRET_KEY = '9hi%uk&)00f34wv-4)m5nbrf6m@d0f3_u1&$xit@faad&nfsem'
+
+heroku config:set EMAIL_HOST=smtp.andrew.cmu.edu EMAIL_PORT=465 EMAIL_USER=cmbarker EMAIL_PASSWORD='Cyanide250a!' NB_SECRET_KEY='9hi%uk&)00f34wv-4)m5nbrf6m@d0f3_u1&$xit@faad&nfsem'

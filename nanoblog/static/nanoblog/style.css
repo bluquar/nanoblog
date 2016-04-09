@@ -1,0 +1,30 @@
+.post_thumbnail {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px;
+}
+
+.comment_thumbnail {
+	max-width: 95px;
+	max-height: 95px;
+	margin: 5px;
+}
+
+.card {
+	min-height: 170px;
+}
+
+.comment.card {
+	min-height: 100px;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+[visible="yes"] {
+	display: default;
+}
+
+[visible="no"] {
+	display: none;
+}

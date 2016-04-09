@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nanoblog Registration</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.2/css/materialize.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col l8 offset-l2 m12 offset-m0 s12">
+                <article class="card white z-depth-2">
+                    <form method="post" action="{% url 'register' %}">
+                        <h2>Register for Nanoblog</h2>
+                        {% csrf_token %}
+
+                        <ul>
+                            {{ registration_form.as_ul }}
+                        </ul>
+
+                        <button class="btn waves-effect waves-light aqua darken-3 submit right">Register
+                            <i class="mdi-content-send right"></i>
+                        </button>   
+                    </form>
+                </article>
+            </div>  
+        </div>
+    </div>
+
+</body>
+</html>

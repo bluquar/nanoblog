@@ -1,0 +1,51 @@
+{% extends "nanoblog/base.html" %}
+{% load staticfiles %}
+
+{% block custom_js %}
+<script src="{% static "nanoblog/js/stream.js" %}"></script>
+{% endblock %}
+
+{% block page %}
+
+{% block stream_header %}
+{% endblock %}
+
+{% block addpost %}
+<form action="{% url 'add' %}" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col l8 offset-l2 m12 offset-m0 s12">
+                <article class="card white z-depth-2">
+                    <header>
+                        <h4>
+                            What's on your mind?
+                        </h4>
+                    </header>
+
+                    {% if blog_post_form.errors %}
+                    <div class="card-content red lighten-2 white-text">
+                    {{ blog_post_form.errors.text }}
+                    </div>
+                    {% endif %}
+
+                    {{ blog_post_form.text }}
+
+                    <button class="btn waves-effect waves-light aqua darken-3 submit right">Post
+                        <i class="mdi-content-send right"></i>
+                    </button>
+
+                    {% block redirect %}
+                    <input type="hidden" name="redirect" value="home">
+                    {% endblock %}
+
+                    {% csrf_token %}
+                </article>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% include "nanoblog/blogposts.html" %}
+
+{% endblock %}

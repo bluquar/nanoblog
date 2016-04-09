@@ -1,0 +1,13 @@
+{% extends "nanoblog/user_stream.html" %}
+
+{% block stream_header_actions %}
+
+<form action="{% url 'edit_profile' %}" method="get">
+	<button class="right white-text waves-effect waves-light btn"/><i class="mdi-editor-mode-edit"></i> Edit Profile</button>
+</form>
+
+{% endblock %}
+
+{% block no_bio %}
+You have not yet <a href="{% url 'edit_profile' %}">set your bio</a>
+{% endblock %}
